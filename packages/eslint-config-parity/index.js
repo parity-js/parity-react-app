@@ -16,7 +16,11 @@
 
 const path = require('path');
 
-process.env.NODE_PATH = path.resolve(__dirname, './node_modules');
+process.env.NODE_PATH = [
+  process.env.NODE_PATH,
+  path.resolve(__dirname, './node_modules')
+].filter((value) => value).join(path.delimiter);
+
 require('module').Module._initPaths();
 
 const restrictedGlobals = require('eslint-restricted-globals');

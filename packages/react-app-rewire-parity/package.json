@@ -1,0 +1,15 @@
+{
+  "name": "react-app-rewire-parity",
+  "version": "0.1.0",
+  "description": "Set of rewires for CRA used by Parity",
+  "main": "index.js",
+  "repository": "https://github.com/Parity-JS/parity-react-app",
+  "author": "Parity Team <admin@parity.io>",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "babel-preset-parity": "^0.1.0",
+    "circular-dependency-plugin": "4.4.0",
+    "lodash.clonedeep": "4.5.0",
+    "react-app-rewired": "1.4.0"
+  }
+}

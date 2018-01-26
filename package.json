@@ -1,10 +1,12 @@
 {
   "private": true,
   "scripts": {
+    "lint": "eslint packages",
     "postinstall": "lerna bootstrap",
     "publish": "lerna publish"
   },
   "devDependencies": {
-    "lerna": "^2.8.0"
+    "eslint": "github:ngotchac/eslint#issue9746",
+    "lerna": "2.8.0"
   }
 }
