@@ -1,0 +1,18 @@
+{
+  "name": "parity-react-app",
+  "version": "0.1.0",
+  "description": "Parity version of Create React App",
+  "bin": {
+    "parity-react-app": "./bin/index.js"
+  },
+  "repository": "https://github.com/Parity-JS/parity-react-app",
+  "author": "Parity Team <admin@parity.io>",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "chalk": "2.3.0",
+    "fs-extra": "5.0.0",
+    "inquirer": "5.0.1",
+    "lodash.partition": "4.6.0",
+    "ora": "1.3.0"
+  }
+}
