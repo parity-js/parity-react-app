@@ -25,18 +25,18 @@ const partition = require('lodash.partition');
 const spinner = require('../spinner');
 
 const TEMPLATE_DIRECTORY = path.resolve(__dirname, '../templates');
-const DAPP_DIRECTORY = fs.realpathSync(process.cwd());
+const APP_DIRECTORY = fs.realpathSync(process.cwd());
 
 async function copyFiles () {
   const files = await fs.readdir(TEMPLATE_DIRECTORY);
-  const appFiles = await fs.readdir(DAPP_DIRECTORY);
+  const appFiles = await fs.readdir(APP_DIRECTORY);
 
   const [ created, modifiedTmp ] = partition(files, (f) => !appFiles.includes(f));
   const modified = [];
 
   for (const file of modifiedTmp) {
     const sourceContent = await fs.readFile(path.resolve(TEMPLATE_DIRECTORY, file));
-    const destContent = await fs.readFile(path.resolve(DAPP_DIRECTORY, file));
+    const destContent = await fs.readFile(path.resolve(APP_DIRECTORY, file));
 
     if (sourceContent.toString() !== destContent.toString()) {
       modified.push(file);
@@ -68,25 +68,24 @@ async function copyFiles () {
   for (const file of toCopy) {
     const filepath = path.resolve(TEMPLATE_DIRECTORY, file);
 
-    await fs.copyFile(filepath, path.join(DAPP_DIRECTORY, file));
+    await fs.copyFile(filepath, path.join(APP_DIRECTORY, file));
   }
 
   spinner.succeed('Copied files');
 }
 
 async function addScripts () {
-  const packageFilepath = path.resolve(DAPP_DIRECTORY, 'package.json');
+  const packageFilepath = path.resolve(APP_DIRECTORY, 'package.json');
   const dappPackage = require(packageFilepath);
 
   const scripts = {
-    build: 'parity-react-dapp build',
-    init: 'parity-react-dapp init',
-    lint: 'parity-react-dapp lint',
-    'lint:css': 'parity-react-dapp lint-css',
-    'lint:js': 'parity-react-dapp lint-js',
-    release: 'parity-react-dapp release',
-    start: 'parity-react-dapp start',
-    test: 'parity-react-dapp test'
+    build: 'parity-react-app build',
+    init: 'parity-react-app init',
+    lint: 'parity-react-app lint',
+    'lint:css': 'parity-react-app lint-css',
+    'lint:js': 'parity-react-app lint-js',
+    start: 'parity-react-app start',
+    test: 'parity-react-app test'
   };
 
   const keys = Object.keys(scripts).filter((key) => dappPackage.scripts[key] !== scripts[key]);

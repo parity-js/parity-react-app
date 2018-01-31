@@ -1,0 +1,13 @@
+{
+  "name": "stylelint-config-parity",
+  "version": "0.1.0",
+  "description": "Stylelint configuration used by Parity Javascript projects",
+  "main": "index.js",
+  "repository": "https://github.com/Parity-JS/parity-react-app",
+  "author": "Parity Team <admin@parity.io>",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "stylelint": "8.4.0",
+    "stylelint-config-standard": "18.0.0"
+  }
+}
