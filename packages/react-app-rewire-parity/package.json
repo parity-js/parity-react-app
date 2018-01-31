@@ -12,6 +12,7 @@
     "eslint-config-parity": "^0.2.0",
     "lodash.clonedeep": "4.5.0",
     "react-app-rewired": "1.4.0",
+    "react-hot-loader": "3.1.3",
     "stylelint-config-parity": "^0.2.0"
   }
 }
