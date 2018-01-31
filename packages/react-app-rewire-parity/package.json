@@ -9,6 +9,7 @@
   "dependencies": {
     "babel-preset-parity": "^0.1.0",
     "circular-dependency-plugin": "4.4.0",
+    "eslint-config-parity": "^0.1.0",
     "lodash.clonedeep": "4.5.0",
     "react-app-rewired": "1.4.0"
   }

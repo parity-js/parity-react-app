@@ -14,21 +14,27 @@
 // You should have received a copy of the GNU General Public License
 // along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 
-const { paths } = require('react-app-rewired');
 const path = require('path');
+const { getBabelLoader } = require('react-app-rewired');
 
-module.exports = function injectIndex (config) {
-  const entryIndex = config.entry.findIndex((entry) => entry === paths.appIndexJs);
+const { createLoaderMatcher, findIndexAndRules } = require('./utils');
 
-  if (entryIndex === -1) {
-    console.warn('Could not find the index JS file in Webpack entries');
-    return config;
-  }
+module.exports = function injectBabel (config) {
+  const { index, rules } = findIndexAndRules(config.module.rules, createLoaderMatcher('babel-loader'));
 
-  // Entry should be at `<root>/src/index.js`
-  // This automatically adds React Hot Loader
-  config.resolve.alias['Application'] = paths.appIndexJs;
-  config.entry[entryIndex] = path.resolve(__dirname, './app.index.js');
+  // Add current directory to babel loader, used to compile the `parity-inject-script`
+  // script
+  rules[index].include = [].concat(
+    rules[index].include || [],
+    path.resolve(__dirname, '..')
+  );
+
+  const babelLoader = getBabelLoader(config.module.rules);
+
+  babelLoader.options = Object.assign({}, babelLoader.options, {
+    babelrc: false,
+    presets: [ require.resolve('babel-preset-parity') ]
+  });
 
   return config;
 };

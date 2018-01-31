@@ -14,26 +14,17 @@
 // You should have received a copy of the GNU General Public License
 // along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 
-const { getBabelLoader } = require('react-app-rewired');
+const { createLoaderMatcher, findRule } = require('./utils');
 
-const { createLoaderMatcher, findIndexAndRules } = require('./utils');
+module.exports = function injectEslintConfig (config) {
+  const eslintRule = findRule(config.module.rules, createLoaderMatcher('eslint-loader'));
 
-module.exports = function injectBabel (config) {
-  const { index, rules } = findIndexAndRules(config.module.rules, createLoaderMatcher('babel-loader'));
+  if (!eslintRule) {
+    console.log('Could not find ESLint rule');
+    return config;
+  }
 
-  // Add current directory to babel loader, used to compile the `parity-inject-script`
-  // script
-  rules[index].include = [].concat(
-    rules[index].include || [],
-    path.resolve(__dirname)
-  );
-
-  const babelLoader = getBabelLoader(config.module.rules);
-
-  babelLoader.options = Object.assign({}, babelLoader.options, {
-    babelrc: false,
-    presets: [ require.resolve('babel-preset-parity') ]
-  });
+  eslintRule.options.baseConfig = require('eslint-config-parity');
 
   return config;
 };

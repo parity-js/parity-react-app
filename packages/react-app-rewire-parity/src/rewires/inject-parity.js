@@ -14,17 +14,18 @@
 // You should have received a copy of the GNU General Public License
 // along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 
-const { createLoaderMatcher, findRule } = require('./utils');
+const path = require('path');
 
-module.exports = function injectEslintConfig (config) {
-  const eslintRule = findRule(config.module.rules, createLoaderMatcher('eslint-loader'));
+const IS_DEV = process.env.NODE_ENV === 'development';
+const IS_DAPP = !!process.env.DAPP;
 
-  if (!eslintRule) {
-    console.log('Could not find Eslint rule');
-    return config;
+module.exports = function injectParity (config) {
+  if (IS_DEV && IS_DAPP) {
+    config.entry = [].concat(
+      path.resolve(__dirname, '../parity-inject-script.js'),
+      config.entry
+    );
   }
-
-  eslintRule.options.baseConfig = require('../eslint.config');
 
   return config;
 };

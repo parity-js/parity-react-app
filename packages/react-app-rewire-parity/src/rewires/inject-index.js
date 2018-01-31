@@ -14,22 +14,21 @@
 // You should have received a copy of the GNU General Public License
 // along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { paths } = require('react-app-rewired');
 const path = require('path');
 
-const { replacePlugin } = require('./utils');
+module.exports = function injectIndex (config) {
+  const entryIndex = config.entry.findIndex((entry) => entry === paths.appIndexJs);
 
-const INDEX_PATH = path.resolve(__dirname, 'index.ejs');
+  if (entryIndex === -1) {
+    console.warn('Could not find the index JS file in Webpack entries');
+    return config;
+  }
 
-module.exports = function injectHTMLPlugin (config) {
-  const htmlPlugin = new HtmlWebpackPlugin(
-    {
-      inject: true,
-      template: INDEX_PATH
-    }
-  );
-
-  config.plugins = replacePlugin(config.plugins, (name) => /HtmlWebpackPlugin/i.test(name), htmlPlugin);
+  // Entry should be at `<root>/src/index.js`
+  // This automatically adds React Hot Loader
+  config.resolve.alias['Application'] = paths.appIndexJs;
+  config.entry[entryIndex] = path.resolve(__dirname, '../app.index.js');
 
   return config;
 };

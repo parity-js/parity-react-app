@@ -14,18 +14,22 @@
 // You should have received a copy of the GNU General Public License
 // along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
-const IS_DEV = process.env.NODE_ENV === 'development';
-const IS_DAPP = !!process.env.DAPP;
+const { replacePlugin } = require('./utils');
 
-module.exports = function injectParity (config) {
-  if (IS_DEV && IS_DAPP) {
-    config.entry = [].concat(
-      path.resolve(__dirname, './parity-inject-script.js'),
-      config.entry
-    );
-  }
+const INDEX_PATH = path.resolve(__dirname, '../index.ejs');
+
+module.exports = function injectHTMLPlugin (config) {
+  const htmlPlugin = new HtmlWebpackPlugin(
+    {
+      inject: true,
+      template: INDEX_PATH
+    }
+  );
+
+  config.plugins = replacePlugin(config.plugins, (name) => /HtmlWebpackPlugin/i.test(name), htmlPlugin);
 
   return config;
 };
