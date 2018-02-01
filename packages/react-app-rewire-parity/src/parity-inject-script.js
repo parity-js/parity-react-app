@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU General Public License
 // along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 
-import Api from '@parity/api';
+import PostMessageProvider from '@parity/api/lib/provider/postMessage';
 import qs from 'query-string';
 
 function initProvider () {
@@ -45,7 +45,7 @@ function initProvider () {
     appId = path[2];
   }
 
-  const ethereum = new Api.Provider.PostMessage(appId);
+  const ethereum = new PostMessageProvider(appId);
 
   console.log(`Requesting API communications token for ${appId}`);
 
@@ -59,37 +59,8 @@ function initProvider () {
     });
 
   window.ethereum = ethereum;
-  return ethereum;
-}
-
-function initWeb3 (ethereum) {
-  if (window.web3) {
-    return;
-  }
-
-  const currentProvider = new Api.Provider.SendAsync(ethereum);
-
-  window.web3 = { currentProvider };
-}
-
-function initParity (ethereum) {
-  if (window.parity) {
-    return;
-  }
-
-  const api = new Api(ethereum);
-
-  window.parity = Object.assign({}, window.parity || {}, {
-    Api,
-    api
-  });
 }
 
 if (typeof window !== 'undefined' && !window.isParity) {
-  const ethereum = initProvider();
-
-  initWeb3(ethereum);
-  initParity(ethereum);
-
-  console.warn('Deprecation: Dapps should only used the exposed EthereumProvider on `window.ethereum`, the use of `window.parity` and `window.web3` will be removed in future versions of this injector');
+  initProvider();
 }
