@@ -21,7 +21,7 @@ const injectEslintConfig = require('./src/rewires/inject-eslint-config');
 const injectHotLoader = require('./src/rewires/inject-hot-loader');
 const injectIndex = require('./src/rewires/inject-index');
 const injectHTMLPlugin = require('./src/rewires/inject-html-plugin');
-const injectScripts = require('./src/rewires/inject-scripts');
+const injectParity = require('./src/rewires/inject-scripts');
 const injectPlugins = require('./src/rewires/inject-plugins');
 
 const removeRequiredFiles = require('./src/rewires/remove-required-files');
