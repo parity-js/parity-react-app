@@ -15,14 +15,18 @@
 // along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 
 const path = require('path');
+const fs = require('fs');
 
-const IS_DEV = process.env.NODE_ENV === 'development';
-const IS_DAPP = !!process.env.DAPP;
+module.exports = function injectScripts (config) {
+  const { INJECT_SCRIPTS } = process.env;
 
-module.exports = function injectParity (config) {
-  if (IS_DEV && IS_DAPP) {
+  if (INJECT_SCRIPTS) {
+    const scriptPaths = INJECT_SCRIPTS
+      .split(path.delimiter)
+      .filter((filepath) => fs.existsSync(filepath));
+
     config.entry = [].concat(
-      path.resolve(__dirname, '../parity-inject-script.js'),
+      scriptPaths,
       config.entry
     );
   }

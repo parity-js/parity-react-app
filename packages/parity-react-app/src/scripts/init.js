@@ -77,15 +77,18 @@ async function copyFiles () {
 async function addScripts () {
   const packageFilepath = path.resolve(APP_DIRECTORY, 'package.json');
   const dappPackage = require(packageFilepath);
+  const scriptVersion = process.env.PARITY_SCRIPT_VERSION
+    ? process.env.PARITY_SCRIPT_VERSION
+    : 'parity-react-app';
 
   const scripts = {
-    build: 'parity-react-app build',
-    init: 'parity-react-app init',
-    lint: 'parity-react-app lint',
-    'lint:css': 'parity-react-app lint-css',
-    'lint:js': 'parity-react-app lint-js',
-    start: 'parity-react-app start',
-    test: 'parity-react-app test'
+    build: `${scriptVersion} build`,
+    init: `${scriptVersion} init`,
+    lint: `${scriptVersion} lint`,
+    'lint:css': `${scriptVersion} lint-css`,
+    'lint:js': `${scriptVersion} lint-js`,
+    start: `${scriptVersion} start`,
+    test: `${scriptVersion} test`
   };
 
   const keys = Object.keys(scripts).filter((key) => dappPackage.scripts[key] !== scripts[key]);

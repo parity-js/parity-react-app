@@ -21,7 +21,7 @@ const injectEslintConfig = require('./src/rewires/inject-eslint-config');
 const injectHotLoader = require('./src/rewires/inject-hot-loader');
 const injectIndex = require('./src/rewires/inject-index');
 const injectHTMLPlugin = require('./src/rewires/inject-html-plugin');
-const injectParity = require('./src/rewires/inject-parity');
+const injectScripts = require('./src/rewires/inject-scripts');
 const injectPlugins = require('./src/rewires/inject-plugins');
 
 const removeRequiredFiles = require('./src/rewires/remove-required-files');
@@ -29,12 +29,6 @@ const removeRequiredFiles = require('./src/rewires/remove-required-files');
 module.exports = function rewireParity (config) {
   // Prevent browser auto-open
   process.env.BROWSER = 'none';
-
-  // Set a different default port
-  process.env.PORT = process.env.PORT || 3001;
-
-  // Use relative public URLs
-  process.env.PUBLIC_URL = './';
 
   // Remove index.html as required
   removeRequiredFiles((file) => /index\.html$/.test(file));
