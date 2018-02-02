@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 // Copyright 2015-2017 Parity Technologies (UK) Ltd.
 // This file is part of Parity.
 
@@ -17,16 +16,31 @@
 
 'use strict';
 
-const chalk = require('chalk');
+const init = require('./init');
+const { lint, lintJS, lintCSS } = require('./lint');
 
-const spinner = require('../src/spinner');
-const main = require('../src/scripts/main');
+async function main () {
+  const command = process.argv[2];
 
-main()
-  .then(() => {
-    process.exit(0);
-  }).catch((error) => {
-    spinner.fail();
-    console.error(chalk.bold.red(error.message) + '\n');
-    process.exit(1);
-  });
+  // If linting, spawn a new process and pass all the arguments
+  if (command === 'lint') {
+    return lint();
+  }
+
+  if (command === 'lint-js') {
+    return lintJS();
+  }
+
+  if (command === 'lint-css') {
+    return lintCSS();
+  }
+
+  if (command === 'init') {
+    return init();
+  }
+
+  // Run the main React Scripts
+  require('react-app-rewired/bin/index');
+}
+
+module.exports = main;
