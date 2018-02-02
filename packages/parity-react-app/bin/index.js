@@ -55,3 +55,5 @@ main()
     console.error(chalk.bold.red(error.message) + '\n');
     process.exit(1);
   });
+
+module.exports = main;
