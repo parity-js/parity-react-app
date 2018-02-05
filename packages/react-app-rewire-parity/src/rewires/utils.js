@@ -68,18 +68,12 @@ const addBeforeRule = (rulesSource, ruleMatcher, value) => {
   rules.splice(index, 0, value);
 };
 
-const replacePlugin = (plugins, nameMatcher, newPlugin) => {
+const findPluginIndex = (plugins, nameMatcher) => {
   const pluginIndex = plugins.findIndex((plugin) => {
     return plugin.constructor && plugin.constructor.name && nameMatcher(plugin.constructor.name);
   });
 
-  if (pluginIndex === -1) {
-    return plugins;
-  }
-
-  const nextPlugins = plugins.slice(0, pluginIndex).concat(newPlugin).concat(plugins.slice(pluginIndex + 1));
-
-  return nextPlugins;
+  return pluginIndex;
 };
 
 module.exports = {
@@ -91,5 +85,5 @@ module.exports = {
   findIndexAndRules,
   findRule,
 
-  replacePlugin
+  findPluginIndex
 };

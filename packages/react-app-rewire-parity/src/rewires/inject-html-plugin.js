@@ -17,19 +17,31 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
-const { replacePlugin } = require('./utils');
+const { findPluginIndex } = require('./utils');
 
 const INDEX_PATH = path.resolve(__dirname, '../index.ejs');
 
 module.exports = function injectHTMLPlugin (config) {
-  const htmlPlugin = new HtmlWebpackPlugin(
+  const pluginIndex = findPluginIndex(config.plugins, (name) => /HtmlWebpackPlugin/i.test(name));
+
+  const prevOptions = pluginIndex === -1
+    ? {}
+    : config.plugins[pluginIndex].options;
+
+  const nextHtmlPlugin = new HtmlWebpackPlugin(Object.assign(
+    {},
+    prevOptions,
     {
       inject: true,
       template: INDEX_PATH
     }
-  );
+  ));
 
-  config.plugins = replacePlugin(config.plugins, (name) => /HtmlWebpackPlugin/i.test(name), htmlPlugin);
+  if (pluginIndex === -1) {
+    config.plugins.push(nextHtmlPlugin);
+  } else {
+    config.plugins[pluginIndex] = nextHtmlPlugin;
+  }
 
   return config;
 };
