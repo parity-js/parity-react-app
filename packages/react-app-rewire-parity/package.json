@@ -1,6 +1,6 @@
 {
   "name": "react-app-rewire-parity",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Set of rewires for CRA used by Parity",
   "main": "index.js",
   "repository": "https://github.com/Parity-JS/parity-react-app",
