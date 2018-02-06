@@ -1,12 +1,14 @@
 {
   "private": true,
   "scripts": {
+    "commit": "git-cz",
     "lint": "eslint packages",
     "postinstall": "lerna bootstrap",
     "publish": "lerna publish",
     "bump": "lerna publish --exact --skip-npm"
   },
   "devDependencies": {
+    "commitizen": "2.9.6",
     "eslint": "github:ngotchac/eslint#issue9746",
     "lerna": "2.8.0"
   },
