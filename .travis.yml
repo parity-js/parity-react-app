@@ -1,0 +1,8 @@
+deploy:
+  provider: npm
+  email: ngotchac@gmail.com
+  api_key:
+    secure: cQDuSQS2UdLhCVJox00FCJqEJURalZitAwmZ9CCYHCEkMrdAg0flz/mZQCn3zV85r4W8c0He3pSG26ELRwUf9Jo1Kjal1QojP0FDQCIL7fxviJZ9uS/UWVr/xI/dkUSexqhEKndli1aqWDjXwWaJ/cQDhcCmaMlh95hghq6e7ifWJ2DFB8hpfiQIsCjSOO/HKTgiPrRwZq26ORjnh4V5bNbDhMxeOMhr/kEur51cx+BDUfR3NbVB+OfAKiAgj1QYnwaZFi911yIEw4bee+U1+qez6SBbZ/a/99NH7xJlib2annO1shX8/5OurNlwDXKEYgkiAWkH/mWo34f8Ai5ldVTJF2m90WwynTQ5kW3vzkhHOmRc4CQKYQX0i6up3HRc4jmPU67+1fCtlqRYNWP/vIf2gikddIVhe/WIKzlG9E6z8mH294ZdMCjsEghP2ngJKbNvN0B7+TZ2ipDrjM6q78A7N4cEtpJGPmQq4WTZ9TvuAhTy43wNqJvVzbLDP5gB+tlQzMWJJGv3VvCJQSqI5//T02oM5rb3SEhQN5JF75/rkywVprJZ0Du/cWfvN0xPxHmld9VLPFpkFaTT5H1k71m+CdjQfINZXgyLkbVULeNzjBleZW20sZd2j0WrL3xW+Z7xul35tfO6rdU0cV2NopduO2MrKEJA6xJaRMEPl0k=
+  on:
+    tags: true
+    repo: Parity-JS/parity-react-app
