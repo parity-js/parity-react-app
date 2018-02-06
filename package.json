@@ -1,24 +1,23 @@
 {
   "private": true,
   "scripts": {
-    "commit": "git-cz",
+    "commit": "commit",
+    "commitmsg": "commitlint -e $GIT_PARAMS",
     "lint": "eslint packages",
     "postinstall": "lerna bootstrap",
     "publish": "lerna publish",
     "bump": "lerna publish --exact --skip-npm"
   },
   "devDependencies": {
-    "commitizen": "2.9.6",
-    "cz-conventional-changelog": "2.1.0",
+    "@commitlint/cli": "6.1.0",
+    "@commitlint/config-conventional": "6.1.0",
+    "@commitlint/config-lerna-scopes": "6.1.0",
+    "@commitlint/prompt-cli": "6.1.0",
     "eslint": "github:ngotchac/eslint#issue9746",
+    "husky": "0.14.3",
     "lerna": "2.8.0"
   },
   "dependencies": {
     "lerna-changelog": "0.7.0"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   }
 }
