@@ -9,10 +9,16 @@
   },
   "devDependencies": {
     "commitizen": "2.9.6",
+    "cz-conventional-changelog": "2.1.0",
     "eslint": "github:ngotchac/eslint#issue9746",
     "lerna": "2.8.0"
   },
   "dependencies": {
     "lerna-changelog": "0.7.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
