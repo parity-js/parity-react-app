@@ -1,6 +1,6 @@
 {
   "name": "parity-react-app",
-  "version": "0.8.3",
+  "version": "0.8.4",
   "description": "Parity version of Create React App",
   "bin": {
     "parity-react-app": "./bin/index.js"
