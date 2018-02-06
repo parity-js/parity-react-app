@@ -10,6 +10,6 @@ echo "📦  Publishing latest release..."
 # published version
 $(npm bin)/lerna exec -- $(pwd)/scripts/try-publish.sh
 
-# echo "📓  Updated CHANGELOG..."
+echo "📓  Updated CHANGELOG..."
 
-# $(npm bin)/lerna-changelog
+$(npm bin)/lerna-changelog
