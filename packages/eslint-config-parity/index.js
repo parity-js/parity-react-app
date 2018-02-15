@@ -41,26 +41,26 @@ module.exports = {
     'FileReader': true
   },
   'rules': {
-    'curly': ['error', 'all'],
-    'newline-after-var': ['error', 'always'],
+    'curly': ['warn', 'all'],
+    'newline-after-var': ['warn', 'always'],
     'no-unused-vars': ['error', { 'args': 'after-used', 'ignoreRestSiblings': true }],
-    'object-curly-spacing': ['error', 'always'],
+    'object-curly-spacing': ['warn', 'always'],
     'object-property-newline': 0,
-    'one-var-declaration-per-line': ['error', 'always'],
-    'padded-blocks': ['error', {
+    'one-var-declaration-per-line': ['warn', 'always'],
+    'padded-blocks': ['warn', {
       'blocks': 'never',
       'classes': 'never',
       'switches': 'never'
     }],
-    'no-alert': 'error',
-    'no-debugger': 'error',
-    'no-duplicate-imports': ['error', {
+    'no-alert': 'warn',
+    'no-debugger': 'warn',
+    'no-duplicate-imports': ['warn', {
       'includeExports': true
     }],
     'no-restricted-globals': ['error'].concat(restrictedGlobals),
-    'jsx-quotes': ['error', 'prefer-single'],
-    'react/jsx-closing-bracket-location': 'error',
-    'react/jsx-curly-spacing': ['error', 'always']
+    'jsx-quotes': ['warn', 'prefer-single'],
+    'react/jsx-closing-bracket-location': 'warn',
+    'react/jsx-curly-spacing': ['warn', 'always']
   },
   overrides: [
     {

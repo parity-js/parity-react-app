@@ -24,7 +24,9 @@ module.exports = function injectEslintConfig (config) {
     return config;
   }
 
-  eslintRule.options.baseConfig = require('eslint-config-parity');
+  // Use the project ESLint config file
+  delete eslintRule.options.baseConfig;
+  eslintRule.options.useEslintrc = true;
 
   return config;
 };

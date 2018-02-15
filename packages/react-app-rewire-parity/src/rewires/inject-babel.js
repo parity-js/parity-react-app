@@ -31,10 +31,9 @@ module.exports = function injectBabel (config) {
 
   const babelLoader = getBabelLoader(config.module.rules);
 
-  babelLoader.options = Object.assign({}, babelLoader.options, {
-    babelrc: false,
-    presets: [ require.resolve('babel-preset-parity') ]
-  });
+  // Use the project BabelRC file
+  delete babelLoader.options.presets;
+  babelLoader.options.babelrc = true;
 
   return config;
 };
