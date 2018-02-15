@@ -61,6 +61,7 @@ if (module.hot) {
       cursor: pointer;
       border-bottom: 1px solid white;
       border-left: 10px solid ${error ? '#ebcb8b' : '#a3be8c'};
+      z-index: 99999;
     `;
 
     div.onclick = () => {
