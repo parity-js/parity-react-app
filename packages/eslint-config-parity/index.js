@@ -43,7 +43,7 @@ module.exports = {
   'rules': {
     'curly': ['warn', 'all'],
     'newline-after-var': ['warn', 'always'],
-    'no-unused-vars': ['error', { 'args': 'after-used', 'ignoreRestSiblings': true }],
+    'no-unused-vars': ['warn', { 'args': 'after-used', 'ignoreRestSiblings': true }],
     'object-curly-spacing': ['warn', 'always'],
     'object-property-newline': 0,
     'one-var-declaration-per-line': ['warn', 'always'],
