@@ -3,7 +3,7 @@
   "scripts": {
     "commit": "commit",
     "commitmsg": "commitlint -e $GIT_PARAMS",
-    "lint": "eslint packages",
+    "lint": "eslint -c .eslintrc.js packages",
     "postinstall": "lerna bootstrap",
     "publish": "lerna publish",
     "bump": "lerna publish --exact --skip-npm",
