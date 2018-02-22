@@ -6,7 +6,8 @@
     "lint": "eslint packages",
     "postinstall": "lerna bootstrap",
     "publish": "lerna publish",
-    "bump": "lerna publish --exact --skip-npm"
+    "bump": "lerna publish --exact --skip-npm",
+    "test": "$npm_execpath run lint"
   },
   "devDependencies": {
     "@commitlint/cli": "6.1.0",
