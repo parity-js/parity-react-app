@@ -26,7 +26,11 @@ const injectPlugins = require('./src/rewires/inject-plugins');
 
 const removeRequiredFiles = require('./src/rewires/remove-required-files');
 
-module.exports = function rewireParity (config) {
+/**
+ * Options can be passed to rewires. For example, `htmlTitle` can be used
+ * by the HTML Webpack Plugin to set the App HTML title.
+ */
+module.exports = function rewireParity (config, options = {}) {
   // Prevent browser auto-open
   process.env.BROWSER = 'none';
 
@@ -58,7 +62,7 @@ module.exports = function rewireParity (config) {
   config = injectBabel(config);
 
   // Change the Webpack HTML Plugin
-  config = injectHTMLPlugin(config);
+  config = injectHTMLPlugin(config, options);
 
   return config;
 };

@@ -21,7 +21,7 @@ const { findPluginIndex } = require('./utils');
 
 const INDEX_PATH = path.resolve(__dirname, '../index.ejs');
 
-module.exports = function injectHTMLPlugin (config) {
+module.exports = function injectHTMLPlugin (config, options = {}) {
   const pluginIndex = findPluginIndex(config.plugins, (name) => /HtmlWebpackPlugin/i.test(name));
 
   const prevOptions = pluginIndex === -1
@@ -33,7 +33,8 @@ module.exports = function injectHTMLPlugin (config) {
     prevOptions,
     {
       inject: true,
-      template: INDEX_PATH
+      template: INDEX_PATH,
+      title: options.htmlTitle || 'React App'
     }
   ));
 
