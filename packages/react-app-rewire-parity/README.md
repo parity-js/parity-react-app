@@ -3,6 +3,31 @@
 This is a set of _rewires_ that can be used with `react-app-rewired`
 to add missing functionalities of Create React App.
 
+## Usage
+
+Create a file named `config-overrides.js` at the root of your project,
+with this format:
+
+```javascript
+const path = require('path');
+const rewireParity = require('react-app-rewire-parity');
+
+module.exports = (config) => {
+  const options = {
+    // Optional title of your HTML page
+    htmlTitle: 'My React App',
+
+    // Optional path of you favicon image (see https://github.com/jantimon/favicons-webpack-plugin)
+    favicon: path.resolve(__dirname, 'src/logo.png')
+  };
+
+
+  config = rewireParity(config, options);
+
+  return config;
+};
+```
+
 ## What rewires are included?
 
 This include a selection of rewires:

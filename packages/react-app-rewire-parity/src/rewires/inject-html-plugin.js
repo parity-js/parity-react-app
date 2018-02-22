@@ -15,6 +15,7 @@
 // along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const path = require('path');
 
 const { findPluginIndex } = require('./utils');
@@ -42,6 +43,10 @@ module.exports = function injectHTMLPlugin (config, options = {}) {
     config.plugins.push(nextHtmlPlugin);
   } else {
     config.plugins[pluginIndex] = nextHtmlPlugin;
+  }
+
+  if (options.favicon) {
+    config.plugins.push(new FaviconsWebpackPlugin(options.favicon));
   }
 
   return config;
