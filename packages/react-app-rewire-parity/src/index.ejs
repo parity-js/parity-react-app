@@ -20,7 +20,7 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     react -->
     <title><%= htmlWebpackPlugin.options.title %></title>
-    <% for (const uri of scriptUris) { %>
+    <% for (const uri of htmlWebpackPlugin.options.scriptUris) { %>
 	    <script src="<%= uri %>" type="text/javascript"></script>
     <% } %>
     <style>
