@@ -28,31 +28,43 @@ const TEMPLATE_DIRECTORY = path.resolve(__dirname, '../templates');
 const APP_DIRECTORY = fs.realpathSync(process.cwd());
 
 async function copyFiles () {
-  const files = await fs.readdir(TEMPLATE_DIRECTORY);
-  const appFiles = await fs.readdir(APP_DIRECTORY);
+  // We want to remove `.template` at the end of the template file names.
+  const destToSource = {};
+  const sourceFilenames = await fs.readdir(TEMPLATE_DIRECTORY);
+  const destFilenames = sourceFilenames.map((sourceFilename) => {
+    const destFilename = sourceFilename.replace(/\.template$/, '');
 
-  const [ created, modifiedTmp ] = partition(files, (f) => !appFiles.includes(f));
-  const modified = [];
+    destToSource[destFilename] = sourceFilename;
+    return destFilename;
+  });
 
-  for (const file of modifiedTmp) {
-    const sourceContent = await fs.readFile(path.resolve(TEMPLATE_DIRECTORY, file));
+  const appFilenames = await fs.readdir(APP_DIRECTORY);
+
+  const [ missingFiles, existingFiles ] = partition(
+    destFilenames,
+    (f) => !appFilenames.includes(f)
+  );
+  const modifiedFiles = [];
+
+  for (const file of existingFiles) {
+    const sourceContent = await fs.readFile(path.resolve(TEMPLATE_DIRECTORY, destToSource[file]));
     const destContent = await fs.readFile(path.resolve(APP_DIRECTORY, file));
 
     if (sourceContent.toString() !== destContent.toString()) {
-      modified.push(file);
+      modifiedFiles.push(file);
     }
   }
 
-  const toCopy = [].concat(modified, created);
+  const toCopy = [].concat(modifiedFiles, missingFiles);
 
   if (toCopy.length === 0) {
     return;
   }
 
-  if (modified.length > 0) {
+  if (modifiedFiles.length > 0) {
     console.log('The following files will be overwritten:');
 
-    modified.forEach((file) => console.log(` ${chalk.yellow.bold('M')} ${file}`));
+    modifiedFiles.forEach((file) => console.log(` ${chalk.yellow.bold('M')} ${file}`));
 
     const { accepted } = await inquirer.prompt([
       { type: 'confirm', name: 'accepted', message: 'Do you want to continue:' }
@@ -66,7 +78,7 @@ async function copyFiles () {
   spinner.start('Copying files');
 
   for (const file of toCopy) {
-    const filepath = path.resolve(TEMPLATE_DIRECTORY, file);
+    const filepath = path.resolve(TEMPLATE_DIRECTORY, destToSource[file]);
 
     await fs.copyFile(filepath, path.join(APP_DIRECTORY, file));
   }

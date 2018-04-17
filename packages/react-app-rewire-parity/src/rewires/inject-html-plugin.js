@@ -35,7 +35,8 @@ module.exports = function injectHTMLPlugin (config, options = {}) {
     {
       inject: true,
       template: INDEX_PATH,
-      title: options.htmlTitle || 'React App'
+      title: options.htmlTitle || 'React App',
+      scriptUris: options.htmlScriptUris || []
     }
   ));
 
