@@ -334,9 +334,9 @@ doctrine@^2.1.0:
   dependencies:
     esutils "^2.0.2"
 
-ejs-loader@0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/ejs-loader/-/ejs-loader-0.3.0.tgz#68736fdc231a490edf919a6446ad9d9055a587be"
+ejs-loader@0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/ejs-loader/-/ejs-loader-0.3.1.tgz#280c8e030bd32428c29826f6bbf6b6d0c14f7ca4"
   dependencies:
     loader-utils "^0.2.7"
     lodash "^3.6.0"
