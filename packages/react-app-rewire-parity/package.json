@@ -16,7 +16,7 @@
     "postcss-import": "12.0.1",
     "postcss-nested": "4.1.0",
     "postcss-simple-vars": "4.1.0",
-    "react-app-rewired": "1.4.0",
+    "react-app-rewired": "1.6.2",
     "react-hot-loader": "4.3.12",
     "stylelint-config-parity": "^0.2.0"
   }
