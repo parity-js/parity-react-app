@@ -8,7 +8,7 @@
   "license": "GPL-3.0",
   "dependencies": {
     "babel-preset-parity": "^0.2.0",
-    "circular-dependency-plugin": "4.4.0",
+    "circular-dependency-plugin": "5.0.2",
     "ejs-loader": "0.3.1",
     "eslint-config-parity": "^0.3.1",
     "favicons-webpack-plugin": "0.0.7",
