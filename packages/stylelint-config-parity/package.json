@@ -7,7 +7,7 @@
   "author": "Parity Team <admin@parity.io>",
   "license": "GPL-3.0",
   "dependencies": {
-    "stylelint": "8.4.0",
+    "stylelint": "9.10.1",
     "stylelint-config-standard": "18.2.0"
   }
 }
