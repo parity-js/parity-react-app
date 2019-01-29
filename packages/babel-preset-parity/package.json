@@ -7,7 +7,7 @@
   "author": "Parity Team <admin@parity.io>",
   "license": "GPL-3.0",
   "dependencies": {
-    "babel-core": "6.26.0",
+    "babel-core": "6.26.3",
     "babel-loader": "8.0.5",
     "babel-plugin-react-intl": "2.4.0",
     "babel-plugin-transform-class-properties": "6.24.1",
