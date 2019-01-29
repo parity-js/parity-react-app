@@ -17,7 +17,7 @@
     "postcss-nested": "4.1.0",
     "postcss-simple-vars": "5.0.1",
     "react-app-rewired": "1.6.2",
-    "react-hot-loader": "4.3.12",
+    "react-hot-loader": "4.6.3",
     "stylelint-config-parity": "^0.2.0"
   }
 }
