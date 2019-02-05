@@ -11,7 +11,7 @@
   "devDependencies": {
     "@commitlint/cli": "7.5.0",
     "@commitlint/config-conventional": "7.5.0",
-    "@commitlint/config-lerna-scopes": "7.3.1",
+    "@commitlint/config-lerna-scopes": "7.5.0",
     "@commitlint/prompt-cli": "7.5.0",
     "eslint": "github:ngotchac/eslint#issue9746",
     "husky": "1.3.1",
