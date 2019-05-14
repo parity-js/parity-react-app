@@ -85,6 +85,18 @@
     lodash "4.17.11"
     resolve-from "^5.0.0"
 
+"@commitlint/load@^7.6.1":
+  version "7.6.2"
+  resolved "https://registry.yarnpkg.com/@commitlint/load/-/load-7.6.2.tgz#b5ed8163fa3117d60faf70a4e677b2017bbc71bb"
+  integrity sha512-I+xk+BkXAG1roXNrPsR1eOd5hEa+oLc6HLYnHAT/HLGKKB3E01IGg3O5SGlg7lpf1yiAaYI+wAnNTr3f3sIbWQ==
+  dependencies:
+    "@commitlint/execute-rule" "^7.6.0"
+    "@commitlint/resolve-extends" "^7.6.0"
+    babel-runtime "^6.23.0"
+    cosmiconfig "^5.2.0"
+    lodash "4.17.11"
+    resolve-from "^5.0.0"
+
 "@commitlint/message@^7.6.0":
   version "7.6.0"
   resolved "https://registry.yarnpkg.com/@commitlint/message/-/message-7.6.0.tgz#899b6b411945dd091d261408b6e994043967bc06"
@@ -99,21 +111,21 @@
     conventional-commits-parser "^2.1.0"
     lodash "^4.17.11"
 
-"@commitlint/prompt-cli@7.6.0":
-  version "7.6.0"
-  resolved "https://registry.yarnpkg.com/@commitlint/prompt-cli/-/prompt-cli-7.6.0.tgz#9216ac0fef0c046963a43a94bf1353f620fa0b90"
-  integrity sha512-3A3uu0vDpIYwFsgsfO5XlCwFVI6bMqOtUnDXS+LpGCgoLgFXc/y8pH+RzBuL/V7ryvO7UE3JCYWSCYWHiahNlw==
+"@commitlint/prompt-cli@7.6.1":
+  version "7.6.1"
+  resolved "https://registry.yarnpkg.com/@commitlint/prompt-cli/-/prompt-cli-7.6.1.tgz#cb0fc7ce8a079b01c4e93ecf5f99305ed982da39"
+  integrity sha512-enAagcRveCaXeTHuZhqFBSWrrimw5PplO+wXBNcu0uGRHDEAU9sapSYZnIraAZsQdYvJdtxrVNSS8LTRsM5uvw==
   dependencies:
-    "@commitlint/prompt" "^7.6.0"
+    "@commitlint/prompt" "^7.6.1"
     execa "0.9.0"
     string-to-stream "1.1.1"
 
-"@commitlint/prompt@^7.6.0":
-  version "7.6.0"
-  resolved "https://registry.yarnpkg.com/@commitlint/prompt/-/prompt-7.6.0.tgz#57a3c06deb57f2d31e58954674da28bbfb2265be"
-  integrity sha512-/SX0AkfVMPM4AjhmAm+k7RZrxG369fBYwiFyn5lw9Qam0v+x1McuRD5sSnzPS4o5+SwG6bxzBCfyyJEdrCHBJw==
+"@commitlint/prompt@^7.6.1":
+  version "7.6.1"
+  resolved "https://registry.yarnpkg.com/@commitlint/prompt/-/prompt-7.6.1.tgz#6f13f3081b3f5def621db0ef7d463be78d2b58b0"
+  integrity sha512-TWii4nCzC1uwwtubp/mlkU8JHeDWCmZqvVyeRswsMhkAH59dsPrCuD3tDePzeffK6hXzLRLBce9hO3PDqONOog==
   dependencies:
-    "@commitlint/load" "^7.6.0"
+    "@commitlint/load" "^7.6.1"
     babel-runtime "^6.23.0"
     chalk "^2.0.0"
     lodash "4.17.11"
