@@ -12,7 +12,7 @@
     "@commitlint/cli": "7.6.0",
     "@commitlint/config-conventional": "7.6.0",
     "@commitlint/config-lerna-scopes": "7.6.0",
-    "@commitlint/prompt-cli": "7.6.0",
+    "@commitlint/prompt-cli": "7.6.1",
     "eslint": "github:ngotchac/eslint#issue9746",
     "husky": "2.2.0",
     "lerna": "3.13.4"
