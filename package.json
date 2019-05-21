@@ -14,7 +14,7 @@
     "@commitlint/config-lerna-scopes": "7.6.0",
     "@commitlint/prompt-cli": "7.6.1",
     "eslint": "github:ngotchac/eslint#issue9746",
-    "husky": "2.2.0",
+    "husky": "2.3.0",
     "lerna": "3.14.1"
   },
   "dependencies": {
