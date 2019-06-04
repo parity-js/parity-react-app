@@ -24,10 +24,10 @@
   resolved "https://registry.yarnpkg.com/@commitlint/config-conventional/-/config-conventional-8.0.0.tgz#f45349cab9dcfc08a30fbcf2b6317506e17bc8e6"
   integrity sha512-umg1irroowOV+x8oZPBw8woCogZO5MFKUYQq+fRZvhowoSwDHXYILP3ETcdHUgvytw/K/a8Xvu7iCypK6oZQ+g==
 
-"@commitlint/config-lerna-scopes@7.6.0":
-  version "7.6.0"
-  resolved "https://registry.yarnpkg.com/@commitlint/config-lerna-scopes/-/config-lerna-scopes-7.6.0.tgz#40ac4888dad00860a7bb8cfc5c289b788e830f84"
-  integrity sha512-cp/gIi47in0VShYpI2cc0vG/TBriai2EZE5CUaun6LLl6++8vn8OF/2W/oJ0e8L43zX7T2v90yFoWNbFcLssIw==
+"@commitlint/config-lerna-scopes@8.0.0":
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/@commitlint/config-lerna-scopes/-/config-lerna-scopes-8.0.0.tgz#131fc1deb940228be09779047598c1ccf9443b1b"
+  integrity sha512-eeXDMj/daff8QNM8WnWNo+cbv6hC+PiSwSniehTAeD++Tq68Ne3UEvkCafquVCFQhTeMxV34kZfpqzgVT/nDPg==
   dependencies:
     import-from "3.0.0"
     resolve-pkg "2.0.0"
