@@ -9,7 +9,7 @@
   "dependencies": {
     "babel-preset-parity": "^0.2.0",
     "circular-dependency-plugin": "4.4.0",
-    "ejs-loader": "0.3.1",
+    "ejs-loader": "0.3.3",
     "eslint-config-parity": "^0.3.1",
     "favicons-webpack-plugin": "0.0.7",
     "lodash.clonedeep": "4.5.0",
