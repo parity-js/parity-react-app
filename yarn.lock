@@ -71,7 +71,7 @@
     babel-runtime "^6.23.0"
     lodash "4.17.14"
 
-"@commitlint/load@^8.1.0", "@commitlint/load@^8.2.0":
+"@commitlint/load@^8.2.0":
   version "8.2.0"
   resolved "https://registry.yarnpkg.com/@commitlint/load/-/load-8.2.0.tgz#9ca53a0c795e4f63d796b4d42279e856549add1a"
   integrity sha512-EV6PfAY/p83QynNd1llHxJiNxKmp43g8+7dZbyfHFbsGOdokrCnoelAVZ+WGgktXwLN/uXyfkcIAxwac015UYw==
@@ -98,21 +98,21 @@
     conventional-commits-parser "^2.1.0"
     lodash "^4.17.11"
 
-"@commitlint/prompt-cli@8.1.0":
-  version "8.1.0"
-  resolved "https://registry.yarnpkg.com/@commitlint/prompt-cli/-/prompt-cli-8.1.0.tgz#82c84900528d962a55e6561fceac8efb020d226c"
-  integrity sha512-Or47gRs3TfoC+Bnkaw8t8um4c1nPPojKY2IpSksDrtq0gPHF1F4AUNEmP1bW4MzB7ZUUKGFgcYv72Z3b8rjWPA==
+"@commitlint/prompt-cli@8.2.0":
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/@commitlint/prompt-cli/-/prompt-cli-8.2.0.tgz#9998294474381b32b9af80ec534193b3a762e228"
+  integrity sha512-o8PFlOji4NpLo4dwM23KMe4TCayXucDKtJr/vbO/0tFGBIcPVZH16MrQaMiOTuIphGgUAlw9DGytFgXNlSJ1og==
   dependencies:
-    "@commitlint/prompt" "^8.1.0"
-    execa "0.9.0"
+    "@commitlint/prompt" "^8.2.0"
+    execa "0.11.0"
     string-to-stream "1.1.1"
 
-"@commitlint/prompt@^8.1.0":
-  version "8.1.0"
-  resolved "https://registry.yarnpkg.com/@commitlint/prompt/-/prompt-8.1.0.tgz#e3ef4dbceb0c73c5f6764f587ab5bfb0f6295356"
-  integrity sha512-fpeVjAkLgGMahczTCu2R2W+RccvF/HCsFnZN+UemOx2i+VcItMgTTxWoxszc5Bfz0J5IOc+PpFn96FXDb36Vgw==
+"@commitlint/prompt@^8.2.0":
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/@commitlint/prompt/-/prompt-8.2.0.tgz#814b6d7665605562251133773033365a568b391d"
+  integrity sha512-iopZRJTlz2a7X8USbOxGpDYVGKQqv9kh2MF88FUtCKbRatrSwGGRFONJM0ZhLYM2GnIxQ44RpombXiDX+JIXPQ==
   dependencies:
-    "@commitlint/load" "^8.1.0"
+    "@commitlint/load" "^8.2.0"
     babel-runtime "^6.23.0"
     chalk "^2.0.0"
     lodash "4.17.14"
@@ -2170,12 +2170,13 @@ eventemitter3@^3.1.0:
   resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-3.1.2.tgz#2d3d48f9c346698fce83a85d7d664e98535df6e7"
   integrity sha512-tvtQIeLVHjDkJYnzf2dgVMxfuSGJeM/7UCG17TT4EumTfNtF+0nebF/4zWOIkCreAbtNqhGEboB6BWrwqNaw4Q==
 
-execa@0.9.0:
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/execa/-/execa-0.9.0.tgz#adb7ce62cf985071f60580deb4a88b9e34712d01"
+execa@0.11.0:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/execa/-/execa-0.11.0.tgz#0b3c71daf9b9159c252a863cd981af1b4410d97a"
+  integrity sha512-k5AR22vCt1DcfeiRixW46U5tMLtBg44ssdJM9PiXw3D8Bn5qyxFCSnKY/eR22y+ctFDGPqafpaXg2G4Emyua4A==
   dependencies:
-    cross-spawn "^5.0.1"
-    get-stream "^3.0.0"
+    cross-spawn "^6.0.0"
+    get-stream "^4.0.0"
     is-stream "^1.1.0"
     npm-run-path "^2.0.0"
     p-finally "^1.0.0"
