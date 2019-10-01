@@ -342,13 +342,13 @@ doctrine@^2.1.0:
   dependencies:
     esutils "^2.0.2"
 
-ejs-loader@0.3.3:
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/ejs-loader/-/ejs-loader-0.3.3.tgz#021aa196b8858f05b6f095576c4afe61012ccc2e"
-  integrity sha512-1pQNFYu+4VIeLLNrSZ8QaiyFk9oXv8koUyQ2Pz5k0dw89HHjeiliTPQ46GfqAzCqJ8cEq8QFNj/HsVjyIuzKEA==
+ejs-loader@0.3.5:
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/ejs-loader/-/ejs-loader-0.3.5.tgz#1105ac1a262e3f36079e8b2bd6ec6058434f60e7"
+  integrity sha512-96Zt17hrKINvbdYUxk5TC5a18J9lIdKLPKIngl9dSyZBsNDKAFibY3z/VBcyq0jWGQkIemLsjdIJIAu4T0CB8A==
   dependencies:
     loader-utils "^0.2.7"
-    lodash "^4.17.11"
+    lodash "^4.17.15"
 
 emojis-list@^2.0.0:
   version "2.1.0"
@@ -926,9 +926,10 @@ locate-path@^2.0.0:
     p-locate "^2.0.0"
     path-exists "^3.0.0"
 
-lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.4, lodash@^4.3.0:
-  version "4.17.11"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
+lodash@^4.17.10, lodash@^4.17.15, lodash@^4.17.4, lodash@^4.3.0:
+  version "4.17.15"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
+  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
 
 loose-envify@^1.4.0:
   version "1.4.0"
