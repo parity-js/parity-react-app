@@ -15,7 +15,7 @@
     "@commitlint/prompt-cli": "8.2.0",
     "eslint": "github:ngotchac/eslint#issue9746",
     "husky": "3.1.0",
-    "lerna": "3.18.4"
+    "lerna": "3.19.0"
   },
   "dependencies": {
     "lerna-changelog": "0.8.3"
