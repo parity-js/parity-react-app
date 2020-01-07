@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "8.2.0",
-    "@commitlint/config-conventional": "8.2.0",
+    "@commitlint/config-conventional": "8.3.4",
     "@commitlint/config-lerna-scopes": "8.2.0",
     "@commitlint/prompt-cli": "8.2.0",
     "eslint": "github:ngotchac/eslint#issue9746",
