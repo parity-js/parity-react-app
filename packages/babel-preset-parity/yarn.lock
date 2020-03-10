@@ -401,17 +401,17 @@ babel-plugin-check-es2015-constants@^6.22.0:
   dependencies:
     babel-runtime "^6.22.0"
 
-babel-plugin-react-intl@5.1.18:
-  version "5.1.18"
-  resolved "https://registry.yarnpkg.com/babel-plugin-react-intl/-/babel-plugin-react-intl-5.1.18.tgz#7713c1fdf0055b606d67e2d1624a2e583a1fcdb7"
-  integrity sha512-tzzZoGDNQOiHmGFh+NPQJDpC10RbKlfw1CBVfALulqRa6UGkAv5eMs9sirxjhD3HryHPbYZ4x5FNdbzOyG2GJw==
+babel-plugin-react-intl@6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-react-intl/-/babel-plugin-react-intl-6.0.1.tgz#a6b172585eac6bbced6b17ffdd1f213c94205d79"
+  integrity sha512-bCXIrakboHTE4vL817Q+igArQIlutNXUXYkGxYYl+aBc/rfPbAb4zs/fk+6DXhL7LjC6ndt8XFUn1Uv/HucHoA==
   dependencies:
     "@babel/core" "^7.7.2"
     "@babel/helper-plugin-utils" "^7.0.0"
     "@types/babel__core" "^7.1.3"
     "@types/schema-utils" "^1.0.0"
     fs-extra "^8.1.0"
-    intl-messageformat-parser "^3.6.4"
+    intl-messageformat-parser "^4.1.0"
     schema-utils "^2.2.0"
 
 babel-plugin-syntax-async-functions@^6.8.0:
@@ -1016,10 +1016,10 @@ home-or-tmp@^2.0.0:
     os-homedir "^1.0.0"
     os-tmpdir "^1.0.1"
 
-intl-messageformat-parser@^3.6.4:
-  version "3.6.4"
-  resolved "https://registry.yarnpkg.com/intl-messageformat-parser/-/intl-messageformat-parser-3.6.4.tgz#5199d106d816c3dda26ee0694362a9cf823978fb"
-  integrity sha512-RgPGwue0mJtoX2Ax8EmMzJzttxjnva7gx0Q7mKJ4oALrTZvtmCeAw5Msz2PcjW4dtCh/h7vN/8GJCxZO1uv+OA==
+intl-messageformat-parser@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/intl-messageformat-parser/-/intl-messageformat-parser-4.1.0.tgz#a961385c99318eeaf7721faf9ac8a0f7fea8e391"
+  integrity sha512-FhbRqxBGMifTpsWC0af2w1E0tksU9YzJnYqFJyPYVA5xTLY2pGHHAm/6aWGioDW9MI8p4nDrzJNwlweDq48i1Q==
   dependencies:
     "@formatjs/intl-unified-numberformat" "^3.2.0"
 
