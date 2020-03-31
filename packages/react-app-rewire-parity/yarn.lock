@@ -1555,10 +1555,10 @@ ejs-loader@0.3.0:
     loader-utils "^0.2.7"
     lodash "^3.6.0"
 
-ejs-loader@0.3.5:
-  version "0.3.5"
-  resolved "https://registry.yarnpkg.com/ejs-loader/-/ejs-loader-0.3.5.tgz#1105ac1a262e3f36079e8b2bd6ec6058434f60e7"
-  integrity sha512-96Zt17hrKINvbdYUxk5TC5a18J9lIdKLPKIngl9dSyZBsNDKAFibY3z/VBcyq0jWGQkIemLsjdIJIAu4T0CB8A==
+ejs-loader@0.3.6:
+  version "0.3.6"
+  resolved "https://registry.yarnpkg.com/ejs-loader/-/ejs-loader-0.3.6.tgz#e6ce60ce8234bd1ce8e69ea59fab0d3b350d4935"
+  integrity sha512-HdnKczoNzvqTlwCbkwEIAKdrC5JWExBbIqh0GLqzmeCX5LYt5wWjq2JXwU9vcAVgn74gGKxcZIleuZF6jnmVdw==
   dependencies:
     loader-utils "^0.2.7"
     lodash "^4.17.15"
