@@ -16,7 +16,7 @@
     "lodash.partition": "4.6.0",
     "ora": "4.0.4",
     "react-app-rewire-parity": "^0.11.0",
-    "react-app-rewired": "2.1.5",
+    "react-app-rewired": "2.1.6",
     "react-scripts": "3.4.1"
   },
   "peerDependencies": {
